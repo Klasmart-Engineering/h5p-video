@@ -89,6 +89,14 @@ H5P.VideoPanopto = (function ($) {
             if (state > -1 && state < 4) {
               self.trigger('stateChange', state);
             }
+
+            if (state === H5P.Video.PLAYING) {
+              self.trigger('play', player.getCurrentTime());
+            }
+            else if (state === H5P.Video.PAUSED) {
+              self.trigger('pause', player.getCurrentTime());
+            }
+            // No way to detect seeked via API
           },
           onPlaybackRateChange: function () {
             self.trigger('playbackRateChange', self.getPlaybackRate());

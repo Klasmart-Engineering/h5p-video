@@ -9,7 +9,7 @@ H5P.Video = (function ($, ContentCopyrights, MediaCopyright, handlers) {
    * @param {Object} parameters.visuals Visual options
    * @param {Object} parameters.playback Playback options
    * @param {Object} parameters.a11y Accessibility options
-   * @param {Boolean} [parameters.startAt] Start time of video 
+   * @param {Boolean} [parameters.startAt] Start time of video
    * @param {Number} id Content identifier
    */
   function Video(parameters, id) {

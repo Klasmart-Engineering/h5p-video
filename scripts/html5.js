@@ -83,6 +83,13 @@ H5P.VideoHtml5 = (function ($) {
         video.src = srcPath;
       }
 
+      // Relay play/pause/seeked events
+      ['play', 'pause', 'seeked'].forEach(function (type) {
+        video.addEventListener(type, function () {
+          self.trigger(type, self.getCurrentTime());
+        });
+      });
+
       // Add poster if provided
       if (options.poster) {
         video.poster = getCrossOriginPath(options.poster); // Uses same crossOrigin as parent. You cannot mix.
