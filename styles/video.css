@@ -1,3 +1,6 @@
+.h5p-video {
+  font-family: 'Roboto', sans-serif;
+}
 .h5p-video > video {
   background: #000;
 }
